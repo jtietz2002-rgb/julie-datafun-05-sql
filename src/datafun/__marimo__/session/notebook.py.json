@@ -1,50 +1,112 @@
 {
   "version": "1",
   "metadata": {
-    "marimo_version": "0.24.0",
-    "script_metadata_hash": null
+    "marimo_version": "0.25.0",
+    "script_metadata_hash": "20471874d2fd222de3934fcc13ac4583"
   },
   "cells": [
     {
+      "id": "setup",
+      "code_hash": "837321f6197e2161fb419d5d419eb1e3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "Hbol",
-      "code_hash": "72d6cb26016364fb8ab4632ad116e0d6",
-      "outputs": [],
+      "code_hash": "0028ab0285cb63acfd9c1e9881b0f136",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"reactive-related-data-analysis\">Reactive Related Data Analysis</h1>\n<span class=\"paragraph\">Explore related data interactively.\nThe data has two one-to-many relationships: <strong>region:store:employee.</strong>\nHow to use: Choose a region.\nSQL will join the related tables andreturn the result to Python.\n| <a href=\"https://github.com/denisecase/datafun-05-sql/blob/main/src/datafun/notebook.py\" rel=\"noopener noreferrer\" target=\"_blank\">Project Source</a>\n| <a href=\"https://denisecase.github.io/datafun-05-sql/\" rel=\"noopener noreferrer\" target=\"_blank\">Project Docs</a></span>\n<hr /></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "MJUe",
-      "code_hash": "b4980bb66d09940063cdbfaf6369a124",
-      "outputs": [],
+      "code_hash": "47dc1eeb5865117f2970479464743b85",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "vblA",
-      "code_hash": "5582aef23ac3183e6187cf3b744b63ab",
-      "outputs": [],
+      "code_hash": "7373993706301959c6f9594da7323a39",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Database connected and tables loaded.</span></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "bkHC",
-      "code_hash": "5797ff745329e65011e17bd4bc787872",
-      "outputs": [],
+      "code_hash": "2f697c70d8aa8576651fb23081528af9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='f3ee5a53-2c27-e7b1-1a09-c3b94a8c12ab'><marimo-dropdown data-initial-value='[&quot;Central&quot;]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eChoose a region&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-options='[&quot;Central&quot;,&quot;East&quot;,&quot;North&quot;,&quot;South&quot;,&quot;West&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false' data-disabled='false'></marimo-dropdown></marimo-ui-element>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "lEQa",
-      "code_hash": "1d7d3b5822cf36a7320cbdaa3bb7e729",
-      "outputs": [],
+      "code_hash": "5e4f39873a1051a4ec9a91def3e9a094",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "PKri",
-      "code_hash": "9f22ebbba642d84c80e76e0a1d4f5e95",
-      "outputs": [],
+      "code_hash": "41ea126191cb921082729b8d1ad3e12c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"employees-by-store\">Employees by Store</h2>\n<span class=\"paragraph\">Selected region: <strong>South</strong>\n(passed to SQL as a bound parameter).</span></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "Xref",
-      "code_hash": "90a045e1e81aa04721c46f7db4439996",
-      "outputs": [],
+      "code_hash": "5e1b241960b3a1efac75cb87f275344f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='Xref-0' random-id='5a7501e9-0ad3-99b3-ed2d-5a1f9aed0eda'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;region_name&#92;&quot;:&#92;&quot;South&#92;&quot;,&#92;&quot;store_name&#92;&quot;:&#92;&quot;Peachtree Center&#92;&quot;,&#92;&quot;employee_count&#92;&quot;:17},{&#92;&quot;region_name&#92;&quot;:&#92;&quot;South&#92;&quot;,&#92;&quot;store_name&#92;&quot;:&#92;&quot;Sunrise Commons&#92;&quot;,&#92;&quot;employee_count&#92;&quot;:14},{&#92;&quot;region_name&#92;&quot;:&#92;&quot;South&#92;&quot;,&#92;&quot;store_name&#92;&quot;:&#92;&quot;Magnolia Market&#92;&quot;,&#92;&quot;employee_count&#92;&quot;:10},{&#92;&quot;region_name&#92;&quot;:&#92;&quot;South&#92;&quot;,&#92;&quot;store_name&#92;&quot;:&#92;&quot;Bayou Crossing&#92;&quot;,&#92;&quot;employee_count&#92;&quot;:5}]&quot;' data-total-rows='4' data-total-columns='3' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-field-types='[[&quot;region_name&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;store_name&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;employee_count&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element><marimo-mime-renderer data-mime='&quot;application/vnd.vegalite.v6+json&quot;' data-data='&quot;{&#92;n  &#92;&quot;&#36;schema&#92;&quot;: &#92;&quot;https://vega.github.io/schema/vega-lite/v6.4.1.json&#92;&quot;,&#92;n  &#92;&quot;config&#92;&quot;: {&#92;n    &#92;&quot;view&#92;&quot;: {&#92;n      &#92;&quot;continuousHeight&#92;&quot;: 300,&#92;n      &#92;&quot;continuousWidth&#92;&quot;: 300&#92;n    }&#92;n  },&#92;n  &#92;&quot;data&#92;&quot;: {&#92;n    &#92;&quot;name&#92;&quot;: &#92;&quot;data-4044bc2254a7ae2111cef40bb17a052a&#92;&quot;&#92;n  },&#92;n  &#92;&quot;datasets&#92;&quot;: {&#92;n    &#92;&quot;data-4044bc2254a7ae2111cef40bb17a052a&#92;&quot;: [&#92;n      {&#92;n        &#92;&quot;employee_count&#92;&quot;: 17,&#92;n        &#92;&quot;region_name&#92;&quot;: &#92;&quot;South&#92;&quot;,&#92;n        &#92;&quot;store_name&#92;&quot;: &#92;&quot;Peachtree Center&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;employee_count&#92;&quot;: 14,&#92;n        &#92;&quot;region_name&#92;&quot;: &#92;&quot;South&#92;&quot;,&#92;n        &#92;&quot;store_name&#92;&quot;: &#92;&quot;Sunrise Commons&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;employee_count&#92;&quot;: 10,&#92;n        &#92;&quot;region_name&#92;&quot;: &#92;&quot;South&#92;&quot;,&#92;n        &#92;&quot;store_name&#92;&quot;: &#92;&quot;Magnolia Market&#92;&quot;&#92;n      },&#92;n      {&#92;n        &#92;&quot;employee_count&#92;&quot;: 5,&#92;n        &#92;&quot;region_name&#92;&quot;: &#92;&quot;South&#92;&quot;,&#92;n        &#92;&quot;store_name&#92;&quot;: &#92;&quot;Bayou Crossing&#92;&quot;&#92;n      }&#92;n    ]&#92;n  },&#92;n  &#92;&quot;encoding&#92;&quot;: {&#92;n    &#92;&quot;x&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;store_name&#92;&quot;,&#92;n      &#92;&quot;sort&#92;&quot;: &#92;&quot;-y&#92;&quot;,&#92;n      &#92;&quot;title&#92;&quot;: &#92;&quot;Store&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;nominal&#92;&quot;&#92;n    },&#92;n    &#92;&quot;y&#92;&quot;: {&#92;n      &#92;&quot;field&#92;&quot;: &#92;&quot;employee_count&#92;&quot;,&#92;n      &#92;&quot;title&#92;&quot;: &#92;&quot;Number of Employees&#92;&quot;,&#92;n      &#92;&quot;type&#92;&quot;: &#92;&quot;quantitative&#92;&quot;&#92;n    }&#92;n  },&#92;n  &#92;&quot;mark&#92;&quot;: {&#92;n    &#92;&quot;type&#92;&quot;: &#92;&quot;bar&#92;&quot;&#92;n  },&#92;n  &#92;&quot;title&#92;&quot;: &#92;&quot;Employees by Store - South&#92;&quot;,&#92;n  &#92;&quot;usermeta&#92;&quot;: {&#92;n    &#92;&quot;embedOptions&#92;&quot;: {}&#92;n  },&#92;n  &#92;&quot;width&#92;&quot;: &#92;&quot;container&#92;&quot;&#92;n}&quot;'></marimo-mime-renderer></div>"
+          }
+        }
+      ],
       "console": []
     }
   ]

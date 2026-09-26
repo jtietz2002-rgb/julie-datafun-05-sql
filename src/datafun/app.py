@@ -98,7 +98,7 @@ DATABASE_FILE: Final[Path] = DATA_DIR / "business.sqlite"
 # === LOCATE THE CHART OUTPUT ===
 
 CHART_DIR: Final[Path] = Path("docs") / "images"
-CHART_PATH: Final[Path] = CHART_DIR / "first-chart.png"
+CHART_PATH: Final[Path] = CHART_DIR / "employee-count-by-region.png"
 
 # === DETERMINE WHAT ONE ROW REPRESENTS ===
 
@@ -123,8 +123,8 @@ The shared keys connect information stored in different tables.
 # === DEFINE THE ANALYTICAL QUESTION ===
 
 CUSTOM_QUERY_DECISION: Final[str] = r"""
-I want to compare the number of employees working at each store.
-The result should have one row per store.
+I want to compare the number of employees working in each region.
+The result should have one row per region.
 
 The information I need requires all three tables:
  - region name is in regions,
@@ -137,7 +137,6 @@ The information I need requires all three tables:
 CUSTOM_SQL_QUERY: Final[str] = """
 SELECT
     r.region_name,
-    s.store_name,
     COUNT(e.employee_id) AS employee_count
 FROM regions AS r
 JOIN stores AS s
@@ -145,8 +144,7 @@ JOIN stores AS s
 LEFT JOIN employees AS e
     ON s.store_id = e.store_id
 GROUP BY
-    r.region_name,
-    s.store_name
+    r.region_name
 ORDER BY
     employee_count DESC;
 """
@@ -155,12 +153,11 @@ ORDER BY
 
 CUSTOM_CHART_DECISION: Final[str] = r"""
 The query result has one numeric value
-(employee count) for each store.
+(employee count) for each region.
 
 A bar chart works for comparing
 a numeric value across named categories.
-Every pandas df has a
-plot.box() method for creating box plots.
+
 """
 
 
@@ -267,14 +264,14 @@ def main() -> None:
     LOG.info(CUSTOM_CHART_DECISION)
 
     employee_ax = result_df.plot.bar(
-        x="store_name",
+        x="region_name",
         y="employee_count",
         legend=False,
     )
 
     # CUSTOM: The analyst can customize the returned Matplotlib Axes object.
-    employee_ax.set_title("Employees by Store")
-    employee_ax.set_xlabel("Store")
+    employee_ax.set_title("Employees by Region")
+    employee_ax.set_xlabel("Region")
     employee_ax.set_ylabel("Number of Employees")
 
     CHART_DIR.mkdir(parents=True, exist_ok=True)
@@ -299,11 +296,10 @@ def main() -> None:
     The SQL query connected information from
     the regions, stores, and employees tables.
 
-    The result has one row per store.
+    The result has one row per region.
 
-    I observed ...
+    I observed that the number of employees varies by region.
 
-    Based on this result, I would next like to explore ...
     """)
 
     LOG.info("-------------------------------")
