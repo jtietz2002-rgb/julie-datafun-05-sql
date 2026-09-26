@@ -1113,3 +1113,455 @@ a numeric value across named categories.
 2026-09-26 11:17:56 | INFO | P05 | ===================================
 2026-09-26 11:17:56 | INFO | P05 | END main() - Executed successfully!
 2026-09-26 11:17:56 | INFO | P05 | ===================================
+2026-09-26 11:30:31 | INFO | P05 | === RUN START ===
+2026-09-26 11:30:31 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:30:31 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:30:31 | INFO | P05 | python=3.14.7
+2026-09-26 11:30:31 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:30:31 | INFO | P05 | shell=bash
+2026-09-26 11:30:31 | INFO | P05 | cwd=.
+2026-09-26 11:30:31 | INFO | P05 | github_actions=False
+2026-09-26 11:30:31 | INFO | P05 | ===================================
+2026-09-26 11:30:31 | INFO | P05 | START main()
+2026-09-26 11:30:31 | INFO | P05 | ===================================
+2026-09-26 11:30:31 | INFO | P05 | -------------------------------
+2026-09-26 11:30:31 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:30:31 | INFO | P05 | -------------------------------
+2026-09-26 11:30:31 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:30:31 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:31:52 | INFO | P05 | === RUN START ===
+2026-09-26 11:31:52 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:31:52 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:31:52 | INFO | P05 | python=3.14.7
+2026-09-26 11:31:52 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:31:52 | INFO | P05 | shell=bash
+2026-09-26 11:31:52 | INFO | P05 | cwd=.
+2026-09-26 11:31:52 | INFO | P05 | github_actions=False
+2026-09-26 11:31:52 | INFO | P05 | ===================================
+2026-09-26 11:31:52 | INFO | P05 | START main()
+2026-09-26 11:31:52 | INFO | P05 | ===================================
+2026-09-26 11:31:52 | INFO | P05 | -------------------------------
+2026-09-26 11:31:52 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:31:52 | INFO | P05 | -------------------------------
+2026-09-26 11:31:52 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:31:52 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:32:36 | INFO | P05 | === RUN START ===
+2026-09-26 11:32:36 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:32:36 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:32:36 | INFO | P05 | python=3.14.7
+2026-09-26 11:32:36 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:32:36 | INFO | P05 | shell=bash
+2026-09-26 11:32:36 | INFO | P05 | cwd=.
+2026-09-26 11:32:36 | INFO | P05 | github_actions=False
+2026-09-26 11:32:36 | INFO | P05 | ===================================
+2026-09-26 11:32:36 | INFO | P05 | START main()
+2026-09-26 11:32:36 | INFO | P05 | ===================================
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:32:36 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:32:36 | INFO | P05 | sales file = data/retail/sale.csv
+2026-09-26 11:32:36 | INFO | P05 | Related tables loaded successfully.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | 02. INSPECT the grain and keys.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | Regions grain: one business region
+2026-09-26 11:32:36 | INFO | P05 | Stores grain: one store
+2026-09-26 11:32:36 | INFO | P05 | Sales grain: one sale
+2026-09-26 11:32:36 | INFO | P05 | Regions columns: ['region_id', 'region_name']
+2026-09-26 11:32:36 | INFO | P05 | Stores columns: ['store_id', 'store_name', 'region_id', 'store_type', 'square_feet']
+2026-09-26 11:32:36 | INFO | P05 | Sales columns: ['sale_id', 'store_id', 'product_group', 'items_sold', 'sale_amount', 'payment_type']
+2026-09-26 11:32:36 | INFO | P05 | 
+The data is stored in three related tables.
+
+One region can have many stores.
+The stores table uses region_id to identify each store's region.
+
+One store can have many sales.
+The sales table uses store_id to identify each sale's store.
+
+The shared keys connect information stored in different tables.
+
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | 03. CREATE a SQLite database.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | SQLite database = data/retail/business.sqlite
+2026-09-26 11:32:36 | INFO | P05 | SQLite database connection created.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:36 | INFO | P05 | 04. LOAD the tables into SQLite.
+2026-09-26 11:32:36 | INFO | P05 | -------------------------------
+2026-09-26 11:32:37 | INFO | P05 | Related tables loaded into SQLite.
+2026-09-26 11:32:37 | INFO | P05 | -------------------------------
+2026-09-26 11:32:37 | INFO | P05 | 05. QUERY across related tables with SQL.
+2026-09-26 11:32:37 | INFO | P05 | -------------------------------
+2026-09-26 11:32:37 | INFO | P05 | 
+I want to compare the number of sales in each region.
+The result should have one row per region.
+
+The information I need requires all three tables:
+ - region name is in regions,
+ - store name is in stores,
+ - sales info is in sales.
+
+2026-09-26 11:32:37 | INFO | P05 | 
+SQL query:
+
+SELECT
+    r.region_name,
+    COUNT(s.sale_id) AS sales_count
+FROM regions AS r
+JOIN stores AS s
+    ON r.region_id = s.region_id
+LEFT JOIN sales AS a
+    ON s.store_id = a.store_id
+GROUP BY
+    r.region_name
+ORDER BY
+    sales_count DESC;
+
+2026-09-26 11:40:51 | INFO | P05 | === RUN START ===
+2026-09-26 11:40:51 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:40:51 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:40:51 | INFO | P05 | python=3.14.7
+2026-09-26 11:40:51 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:40:51 | INFO | P05 | shell=bash
+2026-09-26 11:40:51 | INFO | P05 | cwd=.
+2026-09-26 11:40:51 | INFO | P05 | github_actions=False
+2026-09-26 11:40:51 | INFO | P05 | ===================================
+2026-09-26 11:40:51 | INFO | P05 | START main()
+2026-09-26 11:40:51 | INFO | P05 | ===================================
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:40:51 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:40:51 | INFO | P05 | sales file = data/retail/sale.csv
+2026-09-26 11:40:51 | INFO | P05 | Related tables loaded successfully.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | 02. INSPECT the grain and keys.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | Regions grain: one business region
+2026-09-26 11:40:51 | INFO | P05 | Stores grain: one store
+2026-09-26 11:40:51 | INFO | P05 | Sales grain: one sale
+2026-09-26 11:40:51 | INFO | P05 | Regions columns: ['region_id', 'region_name']
+2026-09-26 11:40:51 | INFO | P05 | Stores columns: ['store_id', 'store_name', 'region_id', 'store_type', 'square_feet']
+2026-09-26 11:40:51 | INFO | P05 | Sales columns: ['sale_id', 'store_id', 'product_group', 'items_sold', 'sale_amount', 'payment_type']
+2026-09-26 11:40:51 | INFO | P05 | 
+The data is stored in three related tables.
+
+One region can have many stores.
+The stores table uses region_id to identify each store's region.
+
+One store can have many sales.
+The sales table uses store_id to identify each sale's store.
+
+The shared keys connect information stored in different tables.
+
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | 03. CREATE a SQLite database.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | SQLite database = data/retail/business.sqlite
+2026-09-26 11:40:51 | INFO | P05 | SQLite database connection created.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:51 | INFO | P05 | 04. LOAD the tables into SQLite.
+2026-09-26 11:40:51 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | Related tables loaded into SQLite.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 05. QUERY across related tables with SQL.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 
+I want to compare the number of sales in each region.
+The result should have one row per region.
+
+The information I need requires all three tables:
+ - region name is in regions,
+ - store name is in stores,
+ - sales info is in sales.
+
+2026-09-26 11:40:53 | INFO | P05 | 
+SQL query:
+
+SELECT
+    r.region_name,
+    SUM(a.sale_amount) AS sales_count
+FROM regions AS r
+JOIN stores AS s
+    ON r.region_id = s.region_id
+LEFT JOIN sales AS a
+    ON s.store_id = a.store_id
+GROUP BY
+    r.region_name
+ORDER BY
+    sales_count DESC;
+
+2026-09-26 11:40:53 | INFO | P05 | 
+Query result:
+  region_name  sales_count
+0     Central      5858.94
+1        West      5369.73
+2       South      5347.85
+3        East      5205.00
+4       North      3447.62
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 06. VISUALIZE the query result with Python.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 
+The query result has one numeric value
+(sales count) for each region.
+
+A bar chart works for comparing
+a numeric value across named categories.
+
+
+2026-09-26 11:40:53 | INFO | P05 | Chart saved successfully at docs/images/sales-count-by-region.png.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 07. SUMMARIZE what you found.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | CUSTOM OBSERVATIONS:
+    The SQL query connected information from
+    the regions, stores, and sales tables.
+
+    The result has one row per region.
+
+    I observed that the number of sales varies by region.
+
+    
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | 08. DISPLAY the visualization.
+2026-09-26 11:40:53 | INFO | P05 | -------------------------------
+2026-09-26 11:40:53 | INFO | P05 | In a script, call plt.show() at the end to display all charts.
+2026-09-26 11:40:53 | INFO | P05 | Close all chart windows (with the close button) to continue.
+2026-09-26 11:44:46 | INFO | P05 | ===================================
+2026-09-26 11:44:46 | INFO | P05 | END main() - Executed successfully!
+2026-09-26 11:44:46 | INFO | P05 | ===================================
+2026-09-26 11:45:29 | INFO | P05 | === RUN START ===
+2026-09-26 11:45:29 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:45:29 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:45:29 | INFO | P05 | python=3.14.7
+2026-09-26 11:45:29 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:45:29 | INFO | P05 | shell=bash
+2026-09-26 11:45:29 | INFO | P05 | cwd=.
+2026-09-26 11:45:29 | INFO | P05 | github_actions=False
+2026-09-26 11:45:29 | INFO | P05 | ===================================
+2026-09-26 11:45:29 | INFO | P05 | START main()
+2026-09-26 11:45:29 | INFO | P05 | ===================================
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:45:29 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:45:29 | INFO | P05 | sales file = data/retail/sale.csv
+2026-09-26 11:45:29 | INFO | P05 | Related tables loaded successfully.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | 02. INSPECT the grain and keys.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | Regions grain: one business region
+2026-09-26 11:45:29 | INFO | P05 | Stores grain: one store
+2026-09-26 11:45:29 | INFO | P05 | Sales grain: one sale
+2026-09-26 11:45:29 | INFO | P05 | Regions columns: ['region_id', 'region_name']
+2026-09-26 11:45:29 | INFO | P05 | Stores columns: ['store_id', 'store_name', 'region_id', 'store_type', 'square_feet']
+2026-09-26 11:45:29 | INFO | P05 | Sales columns: ['sale_id', 'store_id', 'product_group', 'items_sold', 'sale_amount', 'payment_type']
+2026-09-26 11:45:29 | INFO | P05 | 
+The data is stored in three related tables.
+
+One region can have many stores.
+The stores table uses region_id to identify each store's region.
+
+One store can have many sales.
+The sales table uses store_id to identify each sale's store.
+
+The shared keys connect information stored in different tables.
+
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | 03. CREATE a SQLite database.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | SQLite database = data/retail/business.sqlite
+2026-09-26 11:45:29 | INFO | P05 | SQLite database connection created.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:29 | INFO | P05 | 04. LOAD the tables into SQLite.
+2026-09-26 11:45:29 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | Related tables loaded into SQLite.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 05. QUERY across related tables with SQL.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 
+I want to compare the number of sales in each region.
+The result should have one row per region.
+
+The information I need requires all three tables:
+ - region name is in regions,
+ - store name is in stores,
+ - sales info is in sales.
+
+2026-09-26 11:45:31 | INFO | P05 | 
+SQL query:
+
+SELECT
+    r.region_name,
+    SUM(a.sale_amount) AS sales_count
+FROM regions AS r
+JOIN stores AS s
+    ON r.region_id = s.region_id
+LEFT JOIN sales AS a
+    ON s.store_id = a.store_id
+GROUP BY
+    r.region_name
+ORDER BY
+    sales_count DESC;
+
+2026-09-26 11:45:31 | INFO | P05 | 
+Query result:
+  region_name  sales_count
+0     Central      5858.94
+1        West      5369.73
+2       South      5347.85
+3        East      5205.00
+4       North      3447.62
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 06. VISUALIZE the query result with Python.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 
+The query result has one numeric value
+(sales count) for each region.
+
+A bar chart works for comparing
+a numeric value across named categories.
+
+
+2026-09-26 11:45:31 | INFO | P05 | Chart saved successfully at docs/images/sales-count-by-region.png.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 07. SUMMARIZE what you found.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | CUSTOM OBSERVATIONS:
+    The SQL query connected information from
+    the regions, stores, and sales tables.
+
+    The result has one row per region.
+
+    I observed that the total value of sales varies by region.
+
+    
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | 08. DISPLAY the visualization.
+2026-09-26 11:45:31 | INFO | P05 | -------------------------------
+2026-09-26 11:45:31 | INFO | P05 | In a script, call plt.show() at the end to display all charts.
+2026-09-26 11:45:31 | INFO | P05 | Close all chart windows (with the close button) to continue.
+2026-09-26 11:47:06 | INFO | P05 | ===================================
+2026-09-26 11:47:06 | INFO | P05 | END main() - Executed successfully!
+2026-09-26 11:47:06 | INFO | P05 | ===================================
+2026-09-26 11:49:50 | INFO | P05 | === RUN START ===
+2026-09-26 11:49:50 | INFO | P05 | project=P05 - PYTHON AND SQL
+2026-09-26 11:49:50 | INFO | P05 | repo_dir=datafun-05-sql
+2026-09-26 11:49:50 | INFO | P05 | python=3.14.7
+2026-09-26 11:49:50 | INFO | P05 | os=Linux 7.0.0-34-generic
+2026-09-26 11:49:50 | INFO | P05 | shell=bash
+2026-09-26 11:49:50 | INFO | P05 | cwd=.
+2026-09-26 11:49:50 | INFO | P05 | github_actions=False
+2026-09-26 11:49:50 | INFO | P05 | ===================================
+2026-09-26 11:49:50 | INFO | P05 | START main()
+2026-09-26 11:49:50 | INFO | P05 | ===================================
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | 01. LOAD the related tables.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | regions file = data/retail/region.csv
+2026-09-26 11:49:50 | INFO | P05 | stores file = data/retail/store.csv
+2026-09-26 11:49:50 | INFO | P05 | sales file = data/retail/sale.csv
+2026-09-26 11:49:50 | INFO | P05 | Related tables loaded successfully.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | 02. INSPECT the grain and keys.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | Regions grain: one business region
+2026-09-26 11:49:50 | INFO | P05 | Stores grain: one store
+2026-09-26 11:49:50 | INFO | P05 | Sales grain: one sale
+2026-09-26 11:49:50 | INFO | P05 | Regions columns: ['region_id', 'region_name']
+2026-09-26 11:49:50 | INFO | P05 | Stores columns: ['store_id', 'store_name', 'region_id', 'store_type', 'square_feet']
+2026-09-26 11:49:50 | INFO | P05 | Sales columns: ['sale_id', 'store_id', 'product_group', 'items_sold', 'sale_amount', 'payment_type']
+2026-09-26 11:49:50 | INFO | P05 | 
+The data is stored in three related tables.
+
+One region can have many stores.
+The stores table uses region_id to identify each store's region.
+
+One store can have many sales.
+The sales table uses store_id to identify each sale's store.
+
+The shared keys connect information stored in different tables.
+
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | 03. CREATE a SQLite database.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | SQLite database = data/retail/business.sqlite
+2026-09-26 11:49:50 | INFO | P05 | SQLite database connection created.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:50 | INFO | P05 | 04. LOAD the tables into SQLite.
+2026-09-26 11:49:50 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | Related tables loaded into SQLite.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 05. QUERY across related tables with SQL.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 
+I want to compare the number of sales in each region.
+The result should have one row per region.
+
+The information I need requires all three tables:
+ - region name is in regions,
+ - store name is in stores,
+ - sales info is in sales.
+
+2026-09-26 11:49:51 | INFO | P05 | 
+SQL query:
+
+SELECT
+    r.region_name,
+    SUM(a.sale_amount) AS sales_count
+FROM regions AS r
+JOIN stores AS s
+    ON r.region_id = s.region_id
+LEFT JOIN sales AS a
+    ON s.store_id = a.store_id
+GROUP BY
+    r.region_name
+ORDER BY
+    sales_count DESC;
+
+2026-09-26 11:49:51 | INFO | P05 | 
+Query result:
+  region_name  sales_count
+0     Central      5858.94
+1        West      5369.73
+2       South      5347.85
+3        East      5205.00
+4       North      3447.62
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 06. VISUALIZE the query result with Python.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 
+The query result has one numeric value
+(sales count) for each region.
+
+A bar chart works for comparing
+a numeric value across named categories.
+
+
+2026-09-26 11:49:51 | INFO | P05 | Chart saved successfully at docs/images/sales-count-by-region.png.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 07. SUMMARIZE what you found.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | CUSTOM OBSERVATIONS:
+    The SQL query connected information from
+    the regions, stores, and sales tables.
+
+    The result has one row per region.
+
+    I observed that the total value of sales varies by region.
+
+    
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | 08. DISPLAY the visualization.
+2026-09-26 11:49:51 | INFO | P05 | -------------------------------
+2026-09-26 11:49:51 | INFO | P05 | In a script, call plt.show() at the end to display all charts.
+2026-09-26 11:49:51 | INFO | P05 | Close all chart windows (with the close button) to continue.
+2026-09-26 11:49:51 | INFO | P05 | ===================================
+2026-09-26 11:49:51 | INFO | P05 | END main() - Executed successfully!
+2026-09-26 11:49:51 | INFO | P05 | ===================================
