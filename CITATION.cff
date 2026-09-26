@@ -1,0 +1,61 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# WHY: Support correct citation and attribution.
+# ALT: Internal or private repositories may omit citation metadata.
+# CUSTOM: Update author, repository, license, and keyword fields as needed.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+message: "If using this work, please cite it as described in this file."
+type: software
+
+title: "datafun-05-sql"
+version: "1.1.0"
+date-released: "2026-08-20"
+
+authors:
+  - family-names: Tietz
+    given-names: Julie
+    orcid:
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/jtietz2002-rgb/julie-datafun-05-sql"
+url: "https://github.com/jtietz2002-rgb/julie-datafun-05-sql"
+license: MIT
+
+abstract: >
+  Data analytics project focused on relational data and SQL
+  implemented within Python source files.
+  The project emphasizes querying structured datasets,
+  applying joins and aggregations,
+  and integrating analytics-oriented database engines
+  such as DuckDB and SQLite
+  within a professional, reproducible project workflow.
+
+keywords:
+  - data-analytics
+  - analytics-foundations
+  - data-exploration
+  - data-inspection
+  - pandas
+  - logging
+  - professional-python
+  - src-layout
+  - reproducible-workflows
+  - software-quality
+  - ci-cd
+  - github-actions
+  - python
+  - git
+  - github
+  - open-source
+  - uv
+  - ruff
+  - pre-commit
+  - ty
+  - hatchling
+  - zensical
+  - data-analytics-education
